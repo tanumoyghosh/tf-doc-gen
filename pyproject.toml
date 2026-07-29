@@ -1,7 +1,7 @@
 [project]
 name = "tf-doc-gen"
 version = "0.1.0"
-description = "Add your description here"
+description = "Generate clean and customizable Markdown documentation for Terraform modules."
 readme = "README.md"
 authors = [
     { name = "Tanumoy Ghosh", email = "tanumoyghosh@ymail.com" }
@@ -37,3 +37,27 @@ strict = true
 [[tool.mypy.overrides]]
 module = ["hcl2"]
 ignore_missing_imports = true
+
+license = "MIT"
+keywords = [
+    "terraform",
+    "documentation",
+    "markdown",
+    "terraform-module",
+    "hcl",
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://github.com/tanumoyghosh/tf-doc-gen"
+Repository = "https://github.com/tanumoyghosh/tf-doc-gen"
+Issues = "https://github.com/tanumoyghosh/tf-doc-gen/issues"
