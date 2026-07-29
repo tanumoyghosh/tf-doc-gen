@@ -81,6 +81,7 @@ Display the available commands:
 ```bash
 uv run tf-doc-gen --help
 ```
+![CLI Help](docs/images/cli-help.png)
 
 Parse and display Terraform input variables:
 
@@ -109,8 +110,7 @@ The generated documentation includes:
 
 ---
 
-# Example:
-
+### Example Output
 
 ## Example Usage
 
@@ -132,6 +132,7 @@ module "storage" {
 |------|---------|
 | Terraform | `>= 1.6.0` |
 
+![Generated README](docs/images/generated-readme.png)
 
 ---
 
