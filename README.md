@@ -2,6 +2,9 @@
 
 Generate clean, customizable Markdown documentation for Terraform modules directly from HCL.
 
+[![CI](https://github.com/tanumoyghosh/tf-doc-gen/actions/workflows/ci.yml/badge.svg)](https://github.com/tanumoyghosh/tf-doc-gen/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 `tf-doc-gen` parses Terraform modules and generates consistent documentation for requirements, providers, resources, inputs, outputs, and example usage.
 
 ---
@@ -104,9 +107,11 @@ The generated documentation includes:
 - Inputs
 - Outputs
 
-Example:
+---
 
-````markdown
+# Example:
+
+
 ## Example Usage
 
 ```hcl
@@ -126,3 +131,10 @@ module "storage" {
 | Name | Version |
 |------|---------|
 | Terraform | `>= 1.6.0` |
+
+
+---
+
+## License
+
+This project is licensed under the MIT License. See the [MIT License](LICENSE) file for details.
