@@ -26,16 +26,13 @@ def test_creates_readme_when_missing(tmp_path: Path):
 
 
 def test_appends_markers_when_readme_has_no_markers(tmp_path: Path):
-    # Arrange
     readme = tmp_path / "README.md"
     readme.write_text("# My Module", encoding=ENCODING)
 
     content = "## Inputs"
 
-    # Act
     update_readme(tmp_path, content)
 
-    # Assert
     text = readme.read_text(encoding=ENCODING)
 
     assert text.startswith("# My Module")
@@ -45,7 +42,6 @@ def test_appends_markers_when_readme_has_no_markers(tmp_path: Path):
 
 
 def test_replaces_existing_generated_section(tmp_path: Path):
-    # Arrange
     readme = tmp_path / "README.md"
 
     readme.write_text(
@@ -67,10 +63,8 @@ MIT
 
     content = "## Inputs"
 
-    # Act
     update_readme(tmp_path, content)
 
-    # Assert
     text = readme.read_text(encoding=ENCODING)
 
     assert "Old generated content" not in text
@@ -83,39 +77,30 @@ MIT
 
 
 def test_is_readme_up_to_date_returns_true(tmp_path: Path):
-    # Arrange
     content = "## Inputs"
 
     update_readme(tmp_path, content)
 
-    # Act
     result = is_readme_up_to_date(tmp_path, content)
 
-    # Assert
     assert result is True
 
 
 def test_is_readme_up_to_date_returns_false_when_content_changes(tmp_path: Path):
-    # Arrange
     update_readme(tmp_path, "Old content")
 
-    # Act
     result = is_readme_up_to_date(tmp_path, "New content")
 
-    # Assert
     assert result is False
 
 
 def test_is_readme_up_to_date_returns_false_when_readme_missing(tmp_path: Path):
-    # Act
     result = is_readme_up_to_date(tmp_path, "## Inputs")
 
-    # Assert
     assert result is False
 
 
 def test_is_readme_up_to_date_returns_false_without_markers(tmp_path: Path):
-    # Arrange
     readme = tmp_path / "README.md"
 
     readme.write_text(
@@ -123,8 +108,6 @@ def test_is_readme_up_to_date_returns_false_without_markers(tmp_path: Path):
         encoding=ENCODING,
     )
 
-    # Act
     result = is_readme_up_to_date(tmp_path, "## Inputs")
 
-    # Assert
     assert result is False

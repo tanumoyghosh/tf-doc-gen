@@ -3,6 +3,7 @@
 Generate clean, customizable Markdown documentation for Terraform modules directly from HCL.
 
 [![CI](https://github.com/tanumoyghosh/tf-doc-gen/actions/workflows/ci.yml/badge.svg)](https://github.com/tanumoyghosh/tf-doc-gen/actions/workflows/ci.yml)
+[![PyPI version](https://img.shields.io/pypi/v/tf-doc-gen.svg)](https://pypi.org/project/tf-doc-gen/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 `tf-doc-gen` parses Terraform modules and generates consistent documentation for requirements, providers, resources, inputs, outputs, and example usage.
@@ -25,6 +26,28 @@ Generate clean, customizable Markdown documentation for Terraform modules direct
 ---
 
 ## Installation
+
+### Install from PyPI
+
+Install the latest published version using pip:
+
+```bash
+pip install tf-doc-gen
+```
+
+Verify the installation:
+```bash
+tf-doc-gen version
+```
+
+To run for a terraform module:
+```bash
+tf-doc-gen generate <terraform_module_path>
+```
+
+---
+
+## Developer Setup
 
 ### Prerequisites
 
@@ -81,7 +104,8 @@ Display the available commands:
 ```bash
 uv run tf-doc-gen --help
 ```
-![CLI Help](docs/images/cli-help.png)
+
+![CLI Help](https://raw.githubusercontent.com/tanumoyghosh/tf-doc-gen/master/docs/images/cli-help.png)
 
 Parse and display Terraform input variables:
 
@@ -110,9 +134,7 @@ The generated documentation includes:
 
 ---
 
-### Example Output
-
-## Example Usage
+### Example Usage
 
 ```hcl
 module "storage" {
@@ -132,7 +154,7 @@ module "storage" {
 |------|---------|
 | Terraform | `>= 1.6.0` |
 
-![Generated README](docs/images/generated-readme.png)
+![Generated README](https://raw.githubusercontent.com/tanumoyghosh/tf-doc-gen/master/docs/images/generated-readme.png)
 
 ---
 
