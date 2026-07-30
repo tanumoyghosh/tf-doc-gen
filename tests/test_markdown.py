@@ -37,7 +37,6 @@ def test_generate_markdown_without_outputs():
 
 
 def test_generate_markdown_without_variables():
-    # Arrange
     module = ModuleDocumentation(
         name="storage",
         outputs=[
@@ -49,17 +48,14 @@ def test_generate_markdown_without_variables():
         ],
     )
 
-    # Act
     markdown = generate_markdown(module)
 
-    # Assert
     assert 'module "storage"' in markdown
     assert "## Inputs" not in markdown
     assert "## Outputs" in markdown
 
 
 def test_generate_markdown_with_variables_and_outputs():
-    # Arrange
     module = ModuleDocumentation(
         name="storage",
         variables=[
@@ -79,10 +75,8 @@ def test_generate_markdown_with_variables_and_outputs():
         ],
     )
 
-    # Act
     markdown = generate_markdown(module)
 
-    # Assert
     assert 'module "storage"' in markdown
     assert '"./modules/storage"' in markdown
     assert "## Inputs" in markdown
