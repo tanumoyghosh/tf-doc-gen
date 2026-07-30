@@ -4,7 +4,7 @@ Generate clean, customizable Markdown documentation for Terraform modules direct
 
 [![CI](https://github.com/tanumoyghosh/tf-doc-gen/actions/workflows/ci.yml/badge.svg)](https://github.com/tanumoyghosh/tf-doc-gen/actions/workflows/ci.yml)
 [![PyPI version](https://img.shields.io/pypi/v/tf-doc-gen.svg)](https://pypi.org/project/tf-doc-gen/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/tanumoyghosh/tf-doc-gen/blob/master/LICENSE)
 
 `tf-doc-gen` parses Terraform modules and generates consistent documentation for requirements, providers, resources, inputs, outputs, and example usage.
 
